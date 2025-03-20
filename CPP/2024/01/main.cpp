@@ -20,6 +20,7 @@ int countOccurrences(const vector<int> &arr, const int &value);
 
 int main() {
     cout << " ==== Advent of Code 2024 | Day 01 | * ==== " << endl;
+    // https://adventofcode.com/2024/day/1
 
     // ==== Read file content ====
     stringstream cs = readFile("test-data-1.txt");
