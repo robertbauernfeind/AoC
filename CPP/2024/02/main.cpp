@@ -47,15 +47,10 @@ bool safe(const vector<int> &report) {
 }
 
 bool safeWithDampener(const vector<int> &report) {
-    for (auto &r: report) {
-        vector copy(report);
-        const size_t index = indexOf(copy, r);
-        if (index != -1) {
-            copy.erase(copy.begin() + static_cast<int>(index));
-            if (safe(copy)) {
-                return true;
-            }
-        }
+    for (int i = 0; i < report.size(); i++) {
+        vector<int> copy(report);
+        copy.erase(copy.begin() + i);
+        if (safe(copy)) return true;
     }
 
     return false;
